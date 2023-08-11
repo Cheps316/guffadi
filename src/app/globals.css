@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  background: #2b2b2b;
+  margin: 0;
+  padding: 0;
+  font-family: "Alegreya SC", sans-serif;
+  color: white;
+}
+
+/* General Styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+/* Hero page */
+.cards_container{
+  @apply grid grid-cols-3 gap-4 justify-center padding-x padding-y mt-12;
+}
+
+.cards {
+  @apply flex flex-col justify-center items-start p-5 text-white border-2 hover:rounded-2xl p-8 ;
+}
+
+.text_container{
+  @apply grid grid-flow-row justify-self-center padding-x padding-y max-width;
+}

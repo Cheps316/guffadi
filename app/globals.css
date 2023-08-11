@@ -1,27 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  color:white;
+  background-color: #2b2b2b;
+}
+h2{
+  font-family: "Alegreya SC";
+  font-size: xx-large;
+}
+/* General styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.padding-x {
+  @apply sm:px-16 px-6;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.cards_container{
+  @apply grid grid-cols-3 p-6 gap-6 justify-center my-4 ;
+}
+
+.cards{
+  @apply mt-12 p-6 justify-center border-2 border-white rounded-lg hover:rounded-2xl; 
+}
+
+.text_container{
+  @apply my-12;
+}
+
+/* Principles section */
+.principles_container{
+  @apply grid grid-cols-2 p-6 gap-4 my-12 justify-center border-y border-black place-items-center;
+}
+
+.principles_columns{
+  @apply p-6 justify-center; 
+}
+
+.principles_columns h2{
+  @apply text-[45px]; 
+}
+
+.principles_cards{
+  @apply mt-6 p-6 bg-[#252525] hover:bg-[#1D1D1D]; 
+}
+/* .principles_columns h3{
+  @apply 
+} */
+
+.principles_cards h3{
+  @apply bg-[#252525]; 
+}
+
+.principles_cards:hover h3{
+  @apply bg-[#1D1D1D]; 
+}
+
+.principles_cards p{
+  @apply bg-[#252525]; 
+}
+
+.principles_cards:hover p{
+  @apply bg-[#1D1D1D]; 
+}
+
+.principles_img{
+ @apply max-w-full w-full h-auto;
+}
+
+.principles_contents{
+  @apply flex items-center grid-cols-2 gap-4 bg-[#252525] hover:bg-[#1D1D1D] ;
+}
+
+.principles_icon{
+  @apply rounded-full w-[60px] h-[60px] flex items-center justify-center ;
+}
+
+.principles_icon svg{
+  @apply max-w-[40px] h-auto bg-[#252525] hover:bg-[#1D1D1D];
+}
+
+.tryimg{
+  @apply relative w-full aspect-[4/3] my-4;
+}
+
+.tick_list{
+  @apply flex mb-2 mt-4;
+}
+
+.tick{
+  @apply h-6 w-6 mx-2;
+}
+
+.columns_container{
+  @apply grid grid-cols-2 justify-center place-items-center my-12;
+}
+
+.nav{
+  @apply w-full mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-[#101010];
+}
+
+.nav img{
+  @apply bg-[#101010];
+}
+
+/* Footer section */
+.footer_container{
+  @apply grid grid-cols-3 p-6 gap-6 justify-center py-12 bg-[#272829];
+}
+
+.footer_columns{
+  @apply bg-[#272829];
+}
+
+.copyright{
+  @apply p-5 bg-[#3c3f3e];
+}
+
+.footer_columns h3{
+  @apply mb-4 bg-[#272829];
+}
+
+.footer_columns li{
+  @apply bg-[#272829] py-1;
+}
+
+.footer_columns p{
+  @apply bg-[#272829];
 }
